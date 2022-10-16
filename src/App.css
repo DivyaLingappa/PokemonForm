@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container, .pokemon-container {
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.pokemon-container { 
+  width: 1000px;
+}
+
+.form-header, .pokemon-container h1 {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pokemon-container h1 {
+  margin-bottom: 10px;
+}
+
+.personal-info-header .inputbox {
+  margin-bottom: 50px;
+  border: none;
+}
+
+.personal-info-header .inputbox input, .review-box {
+  width: 100%;
+  border: 2px solid rgb(103, 100, 100);
+  outline: none;
+  background: none;
+  padding: 3%;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.form-errors {
+  color: red;
+}
+
+.form-container button, .select-buttons button {
+  width: 40%;
+  height: 40px;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.form-container button:hover, .select-buttons button:hover, .pokemon-card button:hover {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+.info-button {
+  text-align: center;
+}
+
+.pokemon-container input {
+  width: 80%;
+  margin: 0 10%;
+  height: 30px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.pokemon-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y:scroll; 
+  height: 450px;
+  width: 100%;
+  grid-gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.pokemon-wrapper::-webkit-scrollbar {
+  /* -webkit-appearance: none; */
+  width: 7px;
+}
+
+.selected-pokemon {
+  border: 1px solid black;
+  width: 15%;
+  font-size: 1rem;
+  text-align: center;
+  background: rgb(223, 219, 219);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.delete-selected-pokemon {
+  margin: 3%;
+  padding: 1%;
+  background: rgb(223, 219, 219);
+  border-radius: 5px;
+  border: 1px solid rgb(116, 114, 114);
+  width: 20%;
+}
+
+.delete-selected-pokemon:hover{
+  background: rgb(143, 141, 141);;
+}
+
+.pokemon-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(82, 80, 80, 0.5);
+}
+
+.pokemon-card {
+  border: 1px solid gray;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.pokemon-card:hover {
+  background-color: rgb(228, 235, 247);
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 100px;
+  object-fit:cover;
+}
+
+.pokemon-name, .pokemon-type {
+  font-size: 1rem;;
+}
+
+.select-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.select-buttons button {
+  width: 200px;
+}
+
+.select-buttons button:disabled {
+  background: gray;
+}
+
+
+.pokemon-card button {
+  width: 50%;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.pokemon-card-selected {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+.review-box {
+  border: 1px solid rgb(224, 224, 224);
+  margin-bottom: 30px;
+  font-size: 1.2rem;;
+}
+
+.review-box span {
+  color: rgb(167, 167, 167);
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-dialog {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 5%;
+  z-index: 1000;
+}
+
+.modal-img {
+  position: absolute;
+  width: 20%;
+  border-radius: 50%;
+  top: -10%;
+  left: 40%;
+}
+
+.modal-heading {
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.btn-modal-close{
+  width: 100%;
+  background: #6fd649;
+  padding: 5% 0;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.btn-modal-close:hover{
+  border: 1px solid rgb(51, 50, 50);
+  color:black;
+  background-color: #6aed3a;
+}
+
+@media (max-width: 768px) {
+  .pokemon-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .select-buttons button {
+    width: 150px;
+  }  
+}
+
