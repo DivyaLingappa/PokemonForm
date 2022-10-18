@@ -255,7 +255,7 @@ body {
   .modal-heading {
     margin-top: 50px;
   }
-  .form-container, .pokemon-container {
+  .form-container {
     padding: 10px 10px;
   }
   .select-buttons button {
