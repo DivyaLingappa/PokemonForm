@@ -236,12 +236,24 @@ body {
   background-color: #6aed3a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .pokemon-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
   .select-buttons button {
     width: 150px;
   }  
+  .pokemon-container { 
+    width: 500px;
+  }
+  .pokemon-wrapper {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .selected-pokemon {
+    width: 25%;
+  }
+  .modal-heading {
+    margin-top: 50px;
+  }
 }
 
